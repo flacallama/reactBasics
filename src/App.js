@@ -30,25 +30,27 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/*
+      
         <Header headerText={this.state.headerText}/>
-          */}
 
-          {this.props.data.namez}
-          <button onClick={this.props.change}>Change</button>
-        <form onSubmit={(e)=>{
-            this.props.change(e.target.newName.value)
-            e.target.newName.value = ''
-            e.preventDefault()
-          }}>
-          <input type='text' name='newName'></input>
-          <button type='submit'>submit</button>
-        </form>
+        <div className='redux'>
 
-        <NameBox
-          name={this.state.name}
-          changeText={this.changeText}
-          onChangeText={this.onChangeText}/>
+          <p classname='btn '>{this.props.data.namez}</p>
+          <form onSubmit={(e)=>{
+              this.props.change(e.target.newName.value)
+              e.target.newName.value = ''
+              e.preventDefault()
+            }}>
+            <input className='btn' type='text' name='newName'></input>
+            <button className='btn' type='submit'>submit</button>
+          </form>
+
+          <NameBox
+            name={this.state.name}
+            changeText={this.changeText}
+            onChangeText={this.onChangeText}/>
+
+        </div>
         <Footer footerText={this.state.footerText}/>
       </div>
     );

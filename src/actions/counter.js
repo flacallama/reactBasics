@@ -1,5 +1,6 @@
-export default add = () => {
+export default add = (nameParam) => {
   return {
-    type: "CHANGE"
+    type: "CHANGE",
+    nameParam
   }
 }

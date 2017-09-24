@@ -6,7 +6,11 @@ body {
 
 
 .NameBox {
-  margin-top:300px;
+  margin-top:50px;
+}
+
+.redux{
+  margin-top: 200px;
 }
 
 .btn{
