@@ -1,12 +1,22 @@
 import React, { Component } from 'react';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
+
 class Header extends Component {
 
   render () {
     return (
       <div className='header'>
-        <h3>{this.props.headerText}&apos;s store</h3>
+        <h3>{this.props.namez}&apos;s store</h3>
       </div>
     )
   }
 }
-export default Header;
+
+function mapStateToProps(state){
+  return {
+    namez: state.namez
+  }
+}
+
+export default connect(mapStateToProps)(Header);

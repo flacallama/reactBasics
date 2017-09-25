@@ -1,12 +1,22 @@
 import React, { Component } from 'react';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux'
+
 class Footer extends Component {
 
   render () {
     return (
       <div className='footer'>
-        <h3>{this.props.footerText}&apos;s store</h3>
+        <h3>{this.props.namez}&apos;s store</h3>
       </div>
     )
   }
 }
-export default Footer;
+
+function mapStateToProps(state){
+  return {
+    namez: state.namez
+  }
+}
+
+export default connect(mapStateToProps)(Footer);

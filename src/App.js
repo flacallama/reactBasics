@@ -30,7 +30,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      
+
         <Header headerText={this.state.headerText}/>
 
         <div className='redux'>
@@ -51,7 +51,7 @@ class App extends Component {
             onChangeText={this.onChangeText}/>
 
         </div>
-        <Footer footerText={this.state.footerText}/>
+        <Footer footerText={this.props.data.namez}/>
       </div>
     );
   }
